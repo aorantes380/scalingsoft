@@ -1,0 +1,366 @@
+$yellow: #f9b42a; 
+$dark: #3d3855;
+$gray: #727e85;
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.object-cover{
+    object-fit: cover;
+    object-position: top center;
+}
+
+.object-contain{
+    object-fit: contain;
+    object-position: center center;
+}
+
+
+.index-1{
+    z-index: -1;
+}
+
+.inset-0{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.btn-lg{
+    padding: 20px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-yellow{
+    background-color: $yellow;
+}
+
+.bg-gray{
+    background-color: #f6f8f9;
+}
+
+.text-yellow{
+    color: $yellow !important;
+}
+
+.text-gray{
+    color: $gray;
+}
+
+.text-dark{
+    color: $dark;
+}
+
+.bg-yellow{
+    background-color: $yellow;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.h-full{
+    height: 100%;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.h-auto{
+    height: auto;
+}
+
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    box-shadow: 1px 0 10px rgb(0 0 0 / 10%);
+   z-index: 10;
+    .main-menu{
+        margin: 0;
+      
+        li{
+            list-style: none;
+            position: relative;
+            &:hover,&.current{
+                a{
+                    color: $dark;
+                    &:before{
+                        transform: translateX(-50%) scaleX(1);
+                        transform-origin: center left;
+                    }
+                }
+            }
+            a{
+                padding: 10px;
+                text-decoration: none;
+                &:before{
+                    position: absolute;
+                    content: '';
+                    bottom: -5px;
+                    left: 50%;
+                    right: 0;
+                    background:$yellow;
+                    height: 3px;
+                    width: 100%;
+                    transform-origin: center right;
+                    transform: translateX(-50%) scaleX(0);
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+        }
+       
+    }
+}
+
+.block-st{
+    padding: 80px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .bg-slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        .overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.7;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .slide-content{
+        h2{
+            font-size: 48px;
+            span{
+                color: white;
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+.item-1{
+    p{
+        min-height: 48px;
+    }
+}
+
+.item-3{
+    h4{
+        font-size: 20px;
+    }
+}
+
+.item-4{
+    max-width: calc((100%/5) - 30px);
+}
+
+.testimonials{
+    .testimonial{
+        h2{
+            margin-bottom: 40px;
+        }
+       > p{
+            font-size: 24px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+       > span{
+            font-size: 30px;
+        }
+        div{
+            p{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+                line-height: normal;
+            }
+            span{
+                font-weight: normal;
+                font-size: 16px;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+.input-field{
+    &:focus{
+        border-color: $yellow;
+    }
+    input[type='text'],input[type='email'], textarea{
+        background-color: #f2f2f1;
+        width: 100%;
+        padding: 10px 0;
+        text-indent: 10px;
+        border: none;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        &:focus{
+            border-color: $yellow;
+        }
+    }
+}
+
+.btn-send{
+    padding: 15px 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-section{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    &.head-2{
+        height: 250px;
+        h2{
+            font-size: 40px;
+        }
+    }
+    .overlay{
+        opacity: 0.5;
+        z-index: 1;
+    }
+    .inner{
+        height: 100%;
+        padding-top: 90px;
+    }
+}
+
+.page-content{
+    padding: 80px 0;
+    p{
+        text-align: justify;
+        font-size: 16px;
+        line-height: 32px;
+        color: $dark;
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    border: 2px solid $yellow;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: $yellow !important;
+}
+
+
+.slide-content{
+    h2{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    p{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    a{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.swiper-slide-active{
+    .slide-content{
+        h2{
+            transform: translateX(0);
+            transition: all 1s ease;
+            transition-delay: 0.3s;
+            opacity: 1;
+        }
+        p{
+            transform: translateX(0);
+            transition: all 1s ease;
+            transition-delay: 0.8s;
+            opacity: 1;
+        }
+        a{
+            transform: translateX(0);
+            transition: all 1s ease;
+            transition-delay: 1.3s;
+            opacity: 1;
+        }
+    }
+    
+}
+
+.date{
+    text-align: center;
+    h3{
+        font-size: 42px;   
+        font-weight: bold;
+        line-height: 1;
+    }
+    p{
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+        font-weight: bold;
+    }
+}
+
+.event-item{
+    h4{
+        text-transform: uppercase;
+    }
+}
+
+.contact-content{
+    ul{
+        padding: 0;
+        list-style: none;
+        li{
+            line-height: 50px;
+            i{
+                margin-right: 10px;
+                color: $yellow;
+            }
+            font-size: 18px;
+            a{
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}

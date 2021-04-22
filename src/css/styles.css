@@ -1,0 +1,333 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.object-cover {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.object-contain {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.index-1 {
+  z-index: -1;
+}
+
+.inset-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-lg {
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-yellow {
+  background-color: #f9b42a;
+}
+
+.bg-gray {
+  background-color: #f6f8f9;
+}
+
+.text-yellow {
+  color: #f9b42a !important;
+}
+
+.text-gray {
+  color: #727e85;
+}
+
+.text-dark {
+  color: #3d3855;
+}
+
+.bg-yellow {
+  background-color: #f9b42a;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.main-header .main-menu {
+  margin: 0;
+}
+.main-header .main-menu li {
+  list-style: none;
+  position: relative;
+}
+.main-header .main-menu li:hover a, .main-header .main-menu li.current a {
+  color: #3d3855;
+}
+.main-header .main-menu li:hover a:before, .main-header .main-menu li.current a:before {
+  transform: translateX(-50%) scaleX(1);
+  transform-origin: center left;
+}
+.main-header .main-menu li a {
+  padding: 10px;
+  text-decoration: none;
+}
+.main-header .main-menu li a:before {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 50%;
+  right: 0;
+  background: #f9b42a;
+  height: 3px;
+  width: 100%;
+  transform-origin: center right;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.block-st {
+  padding: 80px 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.hero .bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero .bg-slide .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+}
+.hero .bg-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .slide-content h2 {
+  font-size: 48px;
+}
+.hero .slide-content h2 span {
+  color: white;
+}
+.hero .slide-content p {
+  font-size: 18px;
+}
+
+.item-1 p {
+  min-height: 48px;
+}
+
+.item-3 h4 {
+  font-size: 20px;
+}
+
+.item-4 {
+  max-width: calc((100%/5) - 30px);
+}
+
+.testimonials .testimonial h2 {
+  margin-bottom: 40px;
+}
+.testimonials .testimonial > p {
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 20px;
+}
+.testimonials .testimonial > span {
+  font-size: 30px;
+}
+.testimonials .testimonial div p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  line-height: normal;
+}
+.testimonials .testimonial div span {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.input-field:focus {
+  border-color: #f9b42a;
+}
+.input-field input[type=text], .input-field input[type=email], .input-field textarea {
+  background-color: #f2f2f1;
+  width: 100%;
+  padding: 10px 0;
+  text-indent: 10px;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field textarea:focus {
+  border-color: #f9b42a;
+}
+
+.btn-send {
+  padding: 15px 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.main-section.head-2 {
+  height: 250px;
+}
+.main-section.head-2 h2 {
+  font-size: 40px;
+}
+.main-section .overlay {
+  opacity: 0.5;
+  z-index: 1;
+}
+.main-section .inner {
+  height: 100%;
+  padding-top: 90px;
+}
+
+.page-content {
+  padding: 80px 0;
+}
+.page-content p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 32px;
+  color: #3d3855;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #f9b42a;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f9b42a !important;
+}
+
+.slide-content h2 {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-content p {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-content a {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.swiper-slide-active .slide-content h2 {
+  transform: translateX(0);
+  transition: all 1s ease;
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+.swiper-slide-active .slide-content p {
+  transform: translateX(0);
+  transition: all 1s ease;
+  transition-delay: 0.8s;
+  opacity: 1;
+}
+.swiper-slide-active .slide-content a {
+  transform: translateX(0);
+  transition: all 1s ease;
+  transition-delay: 1.3s;
+  opacity: 1;
+}
+
+.date {
+  text-align: center;
+}
+.date h3 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1;
+}
+.date p {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.event-item h4 {
+  text-transform: uppercase;
+}
+
+.contact-content ul {
+  padding: 0;
+  list-style: none;
+}
+.contact-content ul li {
+  line-height: 50px;
+  font-size: 18px;
+}
+.contact-content ul li i {
+  margin-right: 10px;
+  color: #f9b42a;
+}
+.contact-content ul li a {
+  color: black;
+  text-decoration: none;
+}
+.contact-content ul li a:hover {
+  color: #f9b42a;
+}
+
+/*# sourceMappingURL=styles.css.map */
