@@ -19,7 +19,6 @@
             <nav>
                 <ul class="main-menu d-flex">
                     <li class="current"><a href="#">Inicio</a></li>
-                    <li><a href="inicio 2/">Inicio versión 2</a></li>
                     <li><a href="nosotros/">Nosotros</a></li>
                     <li><a href="productos/">Productos</a></li>
                     <li><a href="precio/">Precios</a></li>
@@ -33,56 +32,22 @@
         </div>
     </header>
     
-    <!-- Slider main container -->
-<div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <section class="hero d-flex align-items-center">
-        
-            <div class="bg-slide w-full h-full">
-                <div class="overlay"></div>
-                <img src="src/imgs/slider-1.jpg" alt="">
-            </div>
-            <div class="slide-content w-full">
-                <div class="container overflow-hidden">
-                   <div class="row">
-                       <div class="col-lg-6">
-                        <h2 class="text-yellow mb-3">Cambia <span>Resultados </span><br>desde RRHH</h2>
-                        <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit quas numquam voluptatibus aspernatur veritatis ad.</p>
-                        <a class="btn btn-yellow btn-lg" href="productos/">Ver Productos</a>
-                       </div>
-                   </div>
-                </div>
-            </div>
-        </section>
-      </div>
-      <div class="swiper-slide">
-        <section class="hero d-flex align-items-center">
-        
-            <div class="bg-slide w-full h-full">
-                <div class="overlay"></div>
-                <img src="src/imgs/productos-head.webp" alt="">
-            </div>
-            <div class="slide-content w-full">
-                <div class="container overflow-hidden">
-                   <div class="row">
-                       <div class="col-lg-6">
-                        <h2 class="text-yellow mb-3"><span>Resultados Estratégicos</span> RH Analytics</h2>
-                        <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit quas numquam voluptatibus aspernatur veritatis ad.</p>
-                        <a class="btn btn-yellow btn-lg" href="productos/">Saber más</a>
-                       </div>
-                   </div>
-                </div>
-            </div>
-        </section>
-      </div>
+
+    <!-- <section class="hero video-background">
+        <div class="bg-slide w-full h-full">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KlItXJf1BC8?playlist=KlItXJf1BC8&amp;iv_load_policy=3&amp;enablejsapi=1&amp;disablekb=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;wmode=transparent&amp;origin=https%3A%2F%2Fscalingsoft.com&amp;widgetid=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        </div>
+    </section> -->
+
+    <div class="hero">
+        <div data-video="KlItXJf1BC8" class="hero__video js-background-video">
+          <div class="hero__background">
+            <div id="yt-player"></div>
+          </div>
+        </div>
+        <div class="header__video-overlay js-video-overlay" style="background-image: url('src/imgs/bg-video.jpg');"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-  </div>
+
     <section class="second-st block-st">
         <div class="container">
             <div class="row">
@@ -279,7 +244,56 @@
                 </div>
         </div>
     </section>
+    <footer class="main-footer bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>Scalingsoft</h4>
+                    <br>
+                    <p>
+                        Somos una empresa que simplifica y digitaliza la gestión estratégica de Recursos Humanos, que funde los conocimientos de administración de empresas y sociología.
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                    <div class="widget">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="">Nosotros</a></li>
+                            <li><a href="">Productos</a></li>
+                            <li><a href="">Precios</a></li>
+                            <li><a href="">Aprendizaje</a></li>
+                            <li><a href="">Eventos</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="widget">
+                        <h4>Links de interes</h4>
+                        <ul>
+                            <li><a href="">Política de Privacidad</a></li>
+                            <li><a href="">Términos y condiciones</a></li>
+                            <li><a href="">Productos</a></li>
+                         
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h4>Información contacto</h4>
+                        <ul>
+                            <li><span><i class="fas fa-phone"></i></span>(502) 5555-5555</li>
+                            <li><span><i class="fas fa-map-marker-alt"></i></span>18 av "C" 15-89 zona 10</li>
+                            <li><span><i class="fas fa-envelope"></i></span></span>info@scalingsoft.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="src/js/bg-video.js"></script>
     <script>
       const swiper = new Swiper('.swiper-container', {
         // Optional parameters

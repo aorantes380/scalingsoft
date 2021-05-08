@@ -136,40 +136,84 @@ $gray: #727e85;
     height: 100vh;
   }
 
-.hero{
+// .hero{
+//     position: relative;
+//     width: 100%;
+//     height: 100vh;
+//     .bg-slide{
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: -1;
+//         .overlay{
+//             position: absolute;
+//             width: 100%;
+//             height: 100%;
+//             background-color: black;
+//             opacity: 0.7;
+//         }
+//         img{
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//         }
+//     }
+//     .slide-content{
+//         h2{
+//             font-size: 48px;
+//             span{
+//                 color: white;
+//             }
+//         }
+//         p{
+//             font-size: 18px;
+//         }
+//     }
+// }
+
+.hero {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    .bg-slide{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        .overlay{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            opacity: 0.7;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    display: flex;
+    height: 100vw;
+    max-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    
+    &__background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width : 120%;
+      height: 0;
+      padding-bottom: 66.25%;
+      transform: translate(-45%, -50%);
+      pointer-events: none;
     }
-    .slide-content{
-        h2{
-            font-size: 48px;
-            span{
-                color: white;
-            }
-        }
-        p{
-            font-size: 18px;
-        }
+    
+    &__video-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: opacity 0.5s cubic-bezier(0.250,  0.460, 0.450, 0.940), visibility 0.5s linear;
+      
+      &--fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
-}
+    
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
 
 .item-1{
     p{
@@ -356,6 +400,88 @@ $gray: #727e85;
             font-size: 18px;
             a{
                 color: black;
+                text-decoration: none;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+
+
+.partner-box{
+    padding: 80px;
+    h3{
+        margin-bottom: 30px;
+    }
+    .image-box{
+        padding: 0 20px; 
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.docs-box{
+    margin-bottom: 30px;
+    &:hover{
+        box-shadow: 2px 2px 6px rgba($color: #000000, $alpha: 0.2);
+    }
+    .image-box{
+        height: 100%;
+        font-size: 50px;
+        a{
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    .content{
+        padding: 20px;
+        h4{
+            min-height: 58px;
+        }
+        p{
+            text-align: left;
+            margin: 0;
+        }
+    }
+}
+
+.main-footer{
+    padding: 50px 0;
+}
+
+.widget{
+    h4{
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: $yellow;
+    }
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+            margin-bottom: 10px;
+            span{
+                color: $yellow;
+                padding-right: 10px;
+            }
+            a{
+                color: white;
+                
                 text-decoration: none;
                 &:hover{
                     color: $yellow;
